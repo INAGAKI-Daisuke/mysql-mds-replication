@@ -26,7 +26,7 @@ Virtual Cloud Networkは、次のコンポーネント（サブネット、ル�
 ## Steps
 
 ### **Step 1.1:**
-  Log-in to your OCI tenancy. Once you have logged-in, clik on the _**menu icon**_ on the top left corner 
+  OCIテナントにログインします。clik on the _**menu icon**_ on the top left corner 
 ![](images/Lab1-1.png)
 
 ### **Step 1.2:**
@@ -112,7 +112,7 @@ At the end click the blue button _**Add Ingress Rules**_
 
 ## Conclusion
 
-Now that you have created the compartment, the VCN and added the additional Ingress rules to the Security list, you can proceed to the next lab!
+コンパートメント、VCNを作成し、セキュリティリストに追加の入力ルールを追加したので、次のラボに進みます。 
 
 Learn more about **[Compartments](https://docs.oracle.com/en-us/iaas/Content/GSG/Concepts/settinguptenancy.htm#Understa)**
 Learn more about **[VCN and Subnets](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/managingVCNs_topic-Overview_of_VCNs_and_Subnets.htm)**
