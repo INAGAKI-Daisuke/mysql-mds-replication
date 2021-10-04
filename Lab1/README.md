@@ -15,13 +15,12 @@
 **[Compartment Overview](https://docs.oracle.com/en-us/iaas/Content/GSG/Concepts/settinguptenancy.htm#Understa)**
 
 
-Virtual Cloud Network helps you define your own data centre network topology inside the Oracle Cloud by defining some of the following components (Subnets, Route Tables, Security Lists, Gateways, etc.). Some of these components are set by default automatically within every VCN and can't be deleted:
--	Default route table, with no route rules
--	Default security list, with default security rules
--	Default set of DHCP options, with default values
-For an overview of VCNs, allowed size, default VCN components, and scenarios for using a VCN, check **[Networking Overview](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/overview.htm#network_landing)**.
+Virtual Cloud Networkは、次のコンポーネント（サブネット、ルートテーブル、セキュリティリスト、ゲートウェイなど）を定義することによって、Oracle Cloud内で独自のデータセンターネットワークトポロジを定義するのに役立ちます。 これらのコンポーネントの中には、デフォルトでは初期設定が既に存在し、削除できません：
+-	ルートルールがないデフォルトのルートテーブル
+-	デフォルトのセキュリティルールを持つデフォルトのセキュリティリスト
+-	デフォルト値を持つDHCPオプションのデフォルトセット、VCNの概要、許容サイズ、デフォルトのVCNコンポーネント、およびVCNを使用するため詳細のリンク**[Networking Overview](https://docs.oracle.com/en-us/iaas/Content/Network/Concepts/overview.htm#network_landing)**.
 
-A security list acts as a virtual firewall for an instance, with ingress and egress rules that specify the types of traffic allowed in and out. Each subnet can have multiple security lists associated with it, and each list can have multiple rules. The default security list comes with an initial set of stateful rules, which should in most cases be changed to only allow inbound traffic from authorized subnets relevant to the region that hosts that VCN or subnet. A list of authorized subnet ranges relevant to each region can be found **[here](https://docs.cloud.oracle.com/iaas/tools/public_ip_ranges.json)**.
+セキュリティリストは、インスタンス用の仮想ファイアウォールとして機能し、インプレッシュのトラフィックの種類を指定する入力と出力ルールを使用します。 各サブネットには、複数のセキュリティリストが関連付けられている可能性があり、各リストに複数のルールを持つことができます。 デフォルトのセキュリティリストには、最初のステートフルルールのセットが付属しています。これは、ほとんどの場合、そのVCNまたはサブネットをホストするリージョンに関連する許可されたサブネットからのインバイドサブネットのみを許可するように変更されます。 各地域に関連する承認されたサブネット範囲のリストは**[ここで](https://docs.cloud.oracle.com/iaas/tools/public_ip_ranges.json)**.で見つけることができます。 
 
 
 ## Steps
