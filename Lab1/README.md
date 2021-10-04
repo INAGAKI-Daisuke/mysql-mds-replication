@@ -1,16 +1,17 @@
-# Lab 1: Create a Compartment, a Virtual Cloud Network and allow traffic through MySQL Database Service port
+# Lab 1: コンピュートインタンス・ネットワーク設定等の環境構築
 
 ![](images/Lab1-0.png)
 
 ## Key Objectives:
 
-- Learn how to create a compartment to host resources in your OCI tenancy
-- Learn how to create a Virtual Cloud Network with internet connectivity
-- Add ingress rules in the security list to allow traffic through MySQL Database Service ports
+- OCIテナントのホストリソースにコンパートメントを作成する方法を学びます
+- インターネット接続を備えた仮想クラウドネットワークを作成する方法を学びます
+- MySQLデータベースサービスポートを介したトラフィックを許可するためのセキュリティリストに入力ルールを追加する
 
 ## Introduction
 
-Compartments are a fundamental component of Oracle Cloud Infrastructure for organizing and isolating your cloud resources. You use them to clearly separate resources for the purposes of measuring usage and billing, access (through the use of policies), and isolation (separating the resources for one project or business unit from another). 
+コンパートメントは、クラウドリソースを整理して隔離するためのOracle Cloud Infrastructureの基本コンポーネントです。 使用法と請求、アクセス（ポリシーの使用など）、および個別管理（あるプロジェクトまたはビジネスユニットのリソースを別のプロジェクトのリソースを分離する）の目的で、それらを使用するためにそれらを使用します。 
+
 **[Compartment Overview](https://docs.oracle.com/en-us/iaas/Content/GSG/Concepts/settinguptenancy.htm#Understa)**
 
 
