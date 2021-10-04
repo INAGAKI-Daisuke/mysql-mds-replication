@@ -52,22 +52,22 @@ Virtual Cloud Networkは、次のコンポーネント（サブネット、ル�
 ![](images/Lab1-6.png)
 
 ### **Step 1.7:**
-  In the left bottom pane below the context menu, expand the _**Compartment drop down list**_ and select the _**mds-replication-hol**_ compartment.
+  コンテキストメニューの左下ペインで、_ **コンパートメントドロップダウンリスト** _を展開して_**mds-replication-hol**_ を選択します
 
 ![](images/Lab1-7.png)
 
 ### **Step 1.8:**
-  In the context menu on the top left make sure _**Virtual Cloud Networks**_ is selected, and then click the button _**Start VCN Wizard**_
+  左上のコンテキストメニューでは、_ **仮想クラウドネットワーク** _が選択されていることを確認し、 _**VCNウィザードの開始**_ボタンをクリックします
 
 ![](images/Lab1-8.png)
 
 ### **Step 1.9:**
-  When the wizard starts, select _**VCN with Internet Connectivity**_ and click on _**Start VCN Wizard**_
+  _**インターネット接続性を持つVCN**_を選択し、 _**VCNウィザードを開始**_をクリックします
 
 ![](images/Lab1-9.png)
 
 ### **Step 1.10:**
-  In the _**VCN NAME**_ field enter _**mds-replication-hol-vcn**_, leave the rest as per default, and click _**Next**_
+  _**VCN名**_には_**mds-replication-hol-vcn**_を入力し、_**次**_をクリックします
 
 ![](images/Lab1-10.png)
 
