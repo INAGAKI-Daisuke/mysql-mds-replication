@@ -30,24 +30,24 @@ Virtual Cloud Networkは、次のコンポーネント（サブネット、ル�
 ![](images/Lab1-1.png)
 
 ### **Step 1.2:**
-  Once the menu appears select _**Identity and Security >> Compartments**_
+  メニューが選択されたら  _**アイデンティティとセキュリティ >> コンパートメント**_
 ![](images/Lab1-2.png)
 
 ### **Step 1.3:**
-  From the left menu check that _**Compartments**_ is selected, and then click on _**Create Compartment**_
+  左メニューの_**コンパートメント**_を選択し_**コンパートメントの作成**_をクリック
 ![](images/Lab1-3.png)
 
 ### **Step 1.4:**
-  In the name and description field enter _**mds-replication-hol**_ and click the button _**Create Compartment**_
+  名前と説明の箇所には _**mds-replication-hol**_ を入力し、_**コンパートメントの作成**_をクリック
 ![](images/Lab1-4.png)
 
 ### **Step 1.5:**
-  Once the compartment is created you will get to a screen like the one below
+  正常に完了すると以下の画面が出力されます
 ![](images/Lab1-5.png)
 
 ### **Step 1.6:**
-  Now that the compartment is created, let's create the VCN.
-  From the main menu, select _**Networking >> Virtual Cloud Networks**_ from the _**menu icon**_ on the top left corner
+　コンパートメントが作成されたので、VCNを作成しましょう。 
+  メインメニューから _**ネットワーキング >> 仮想クラウド・ネットワーク**_ を選択します
 
 ![](images/Lab1-6.png)
 
