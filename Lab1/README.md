@@ -72,41 +72,41 @@ Virtual Cloud Networkは、次のコンポーネント（サブネット、ル�
 ![](images/Lab1-10.png)
 
 ### **Step 1.11:**
-   Review and click _**Create**_
+   _**作成**_にて作成データの確認を行います。
 
 ![](images/Lab1-11.png)
 
 ### **Step 1.12:**
-  Once the VCN is created, click on  _**View Virtual Cloud Network**_ and you will be taken to the related page as in the picture below. Click on _**Public Subnet-mds-replication-hol-vcn**_
+  VCNの作成後、下の図のように関連するページに移動します。 表示後、_**パブリック-サブネット-mds-replication-hol-vcn**_をクリックします
 
 ![](images/Lab1-12.png)
 
 ### **Step 1.13:**
- Earlier we have set up the subnet to use the VCN's default security list, that has default rules, which are designed to make it easy to get started with Oracle Cloud Infrastructure. 
+ VCNのデフォルトのセキュリティリストを使用するようにサブネットを設定します。これにより、Oracle Cloud Infrastructureを使い始めることを容易にするように設計されています。 
 
- Now we will customize the default security list of the VCN to allow traffic through MySQL Database Service ports by clicking on  _**Default_Security_List_for_mds-replication-hol-vcn**_
+ これで、_ ** default_security_list_for_mds-replication-hol-vcn ** _をクリックしてMySQLデータベースサービスポートを介してトラフィックを許可するVCNのデフォルトのセキュリティリストをカスタマイズします。 
 
 ![](images/Lab1-13.png)
 
 ### **Step 1.14:**
-  Click on _**Add Ingress Rules**_
+  _**イングレスルールの追加**_をクリック
 
 ![](images/Lab1-14.png)
 
 ### **Step 1.15:**
- Add the necessary rule to the default security list to enable traffic through MySQL Database Service port. 
+ MySQLデータベースサービスポートを介してトラフィックを有効にするには、必要なルールをデフォルトのセキュリティリストに追加します 
 
 Insert the details as below:
 - Source CIDR:  _**0.0.0.0/0**_
 - IP Protocol: _**TCP**_
 - Destination Port Range: _**3306,33060**_
 
-At the end click the blue button _**Add Ingress Rules**_
+入力後 _**イングレスルールの追加**_をクリックします
 
 ![](images/Lab1-15.png)
 
 ### **Step 1.16:**
-  Once the Ingress Rules are added, you will see the following result:
+  正常に完了すると以下のような表示となります:
 
 ![](images/Lab1-16.png)
 
