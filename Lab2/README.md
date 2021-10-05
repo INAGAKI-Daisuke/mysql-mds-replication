@@ -156,26 +156,21 @@ reboot
 
 _**注意**_：インスタンスが実行状態に入るとすぐに、cloud-initスクリプトがトリガーされ、完了するまでにさらに数分かかります。 その間に、インスタンスへの接続を開始します。 
 ### **Step 2.16:**
-- We will now access the newly created instance using cloud shell.
-Click on the _**Cloud Shell**_ icon in the top right part of the screen.
+- 次に、クラウドシェルを使用して新しく作成されたインスタンスにアクセスします。 画面の右上にある _**CloudShell**_ アイコンをクリックします 
 
 ![](images/Lab2-17.png)
 
 ### **Step 2.17:**
-- Once the Cloud shell comes up, familiarize with the commands. 
-On the right part of top bar, you have the buttons to _**reduce to icon**_, _**exapnd**_ and _**close**_ the cloud shell.
-On the left part of top bar, you have the _**cloud shell menu**_. Feel free to adjust the _**font size**_ as per picture below.
-
+- クラウドシェルが起動したら、コマンドをよく理解してください。トップバーの右側には、クラウドシェルを _**アイコンに縮小**_ 、_**拡張**_、_**close**_ ボタンがあります。
+トップバーの左側には、_**クラウドシェルメニュー**_ があります。 下の図のように、_**フォントサイズ**_ を自由に調整してください 
 ![](images/Lab2-18.png)
 
 ### **Step 2.18:**
-- Take the previously saved private key file from your local machine, drag and drop it into the cloud shell, as shown in the picture below.
-
+- 次の図に示すように、以前に保存した秘密鍵ファイルをローカルマシンから取得し、クラウドシェルにドラッグアンドドロップします
 ![](images/Lab2-19.png)
 
 ### **Step 2.19:**
-- Once the upload completes, you will be notified, as per picture below
-
+- アップロードが完了すると、下の写真のように通知されます 
 ![](images/Lab2-20.png)
 
 ### **Step 2.20:**
