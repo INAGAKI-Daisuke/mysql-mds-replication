@@ -27,22 +27,20 @@ Oracle Cloud Infrastructure Cloud（OCI）シェルは、Oracle CloudConsoleか�
 ## Steps
 
 ### **Step 2.1:**
-- From the main menu on the top left corner select _**Compute >> Instances**_
+- 左メニューから _**コンピュート >> インスタンス**_　と選択します
 
 ![](images/Lab2-1.png)
 
 ### **Step 2.2:**
-- In the compartment selector, make sure that the _**mds-replication-hol**_ Compartment is selected.
+- コンパートメントセレクターで、mds-replication-holコンパートメントが選択されていることを確認します。
 
-- Click on the _**Create Instance**_ button.
-
+- _**インスタンスの作成**_ボタンをクリックします。 
 ![](images/Lab2-2.png)
 
 ### **Step 2.3:**
-- In the _**Name**_ field, insert _**mysql-replication-source**_ (or any other name at your convenience).
+- _**名前**_ には _**mysql-replication-source**_ を入力します (他の名前でも結構です).
 
-- The _**Placement**_ section is the section where you can change Availability Domain and Fault Domain. For the scope of this workshop leave everything as default.
-
+- _**配置**_ はデフォルト設定のままで問題ありません
 ![](images/Lab2-3.png)
 
 ### **Step 2.4:**
