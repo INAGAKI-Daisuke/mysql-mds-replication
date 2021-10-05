@@ -1,25 +1,25 @@
-# Lab2: Create the Replication Source
+# Lab2: Replicationソースの構築
 
 ![](images/Lab2-0.png)
 
 ## Key Objectives:
 
-- Learn how to create a Compute Instance in a specific compartment
-- Learn how to use Cloud Shell to connect to a compute instance via ssh
-- Learn basic MySQL commands to connect to a local database server and to list schemas
-
+- 特定のコンパートメントにコンピューティングインスタンスを作成する方法を学ぶ
+- CloudShellを使用してssh経由でコンピューティングインスタンスに接続する方法を学ぶ
+- ローカルデータベースサーバーに接続してスキーマを一覧表示するための基本的なMySQLコマンドを学習します
+- 
 ## Introduction
 
-The main scope of this Lab it is to build a Replication Source, in order to mock up your existing on-premise MySQL environment. In order to achieve this as easily as possible, we will build a Compute Instance, pre-initialized using a cloud-init script, which will install, configure, and populate a MySQL environment on your behalf.
-Additionally, we will use Cloud Shell to interact with our environment, in this and in the following Labs.
+このラボの主な範囲は、既存のオンプレミスMySQL環境をモックアップするために、レプリケーションソースを構築することです。 これを可能な限り簡単に実現するために、cloud-initスクリプトを使用して事前に初期化されたコンピューティングインスタンスを構築します。このインスタンスは、ユーザーに代わってMySQL環境をインストール、構成、および設定します。
+さらに、このラボと次のラボで、CloudShellを使用して環境とやり取りします。
 
-Oracle Cloud Infrastructure Compute lets you provision and manage compute hosts, known as instances . You can launch instances as needed to meet your compute and application requirements. After you launch an instance, you can access it securely from your computer, restart it, attach and detach volumes, and terminate it when you're done with it. 
+Oracle Cloud Infrastructure Computeを使用すると、インスタンスと呼ばれるコンピューティングホストをプロビジョニングおよび管理できます。 コンピューティングとアプリケーションの要件を満たすために、必要に応じてインスタンスを起動できます。 インスタンスを起動した後、コンピュータから安全にアクセスし、再起動し、ボリュームをアタッチおよびデタッチし、終了したら終了することができます。 
 **[Compute Instances overview](https://docs.oracle.com/en-us/iaas/Content/Compute/Concepts/computeoverview.htm)**
 
-Cloud-init is the industry standard multi-distribution method for cross-platform cloud instance initialization. It is supported across all major public cloud providers, provisioning systems for private cloud infrastructure, and bare-metal installations.
+Cloud-initは、クロスプラットフォームのクラウドインスタンスを初期化するための業界標準のマルチディストリビューション方式です。 これは、すべての主要なパブリッククラウドプロバイダー、プライベートクラウドインフラストラクチャのプロビジョニングシステム、およびベアメタルインストールでサポートされています。 
 **[Cloud-init documentation](https://cloudinit.readthedocs.io/en/latest/index.html)**
 
-Oracle Cloud Infrastructure Cloud (OCI) Shell is a web browser-based terminal accessible from the Oracle Cloud Console. Cloud Shell is free to use (within monthly tenancy limits), and provides access to a Linux shell, with a pre-authenticated Oracle Cloud Infrastructure CLI, a pre-authenticated Ansible installation, and other useful tools for following Oracle Cloud Infrastructure service tutorials and labs. Cloud Shell is a feature available to all OCI users, accessible from the Console.
+Oracle Cloud Infrastructure Cloud（OCI）シェルは、Oracle CloudConsoleからアクセスできるWebブラウザベースの端末です。 Cloud Shellは無料で（毎月のテナント制限内で）使用でき、事前認証されたOracle Cloud Infrastructure CLI、事前認証されたAnsibleインストール、およびOracle CloudInfrastructureサービスのチュートリアルに従うためのその他の便利なツールを備えたLinuxシェルへのアクセスを提供します。 ラボ。 Cloud Shellは、すべてのOCIユーザーが利用できる機能であり、コンソールからアクセスできます。 
 **[Cloud Shell overview](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cloudshellintro.htm)**
 
 
