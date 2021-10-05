@@ -51,18 +51,17 @@ Oracle Cloud Infrastructure Cloud（OCI）シェルは、Oracle CloudConsoleか�
 ![](images/Lab2-4.png)
 
 ### **Step 2.5:**
-- In the _**Browse All Images**_ window, select _**Oracle Linux**_, expand the drop down _**OS version**_ box, and select _**8**_
+- **「すべてのイメージの参照」** ウィンドウで、**「Oracle Linux」** を選択し、**「OSバージョン」** ドロップダウン・ボックスを展開して、**「8」** を選択します。 
 
 ![](images/Lab2-5.png)
 
 ### **Step 2.6:**
-- Click on the _**Select Image**_ button
+- **「イメージの選択」** ボタンをクリックします 
 
 ![](images/Lab2-6.png)
 
 ### **Step 2.7:**
-- In the _**Shape**_ subsection click on _**Change Shape**_
-
+- _**Shape**_ サブセクションで _**Change Shape**_　をクリックします
 ![](images/Lab2-7.png)
 
 ### **Step 2.8:**
