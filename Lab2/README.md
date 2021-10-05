@@ -65,16 +65,15 @@ Oracle Cloud Infrastructure Cloud（OCI）シェルは、Oracle CloudConsoleか�
 ![](images/Lab2-7.png)
 
 ### **Step 2.8:**
-- In the _**Browse All Shapes**_ window, click on the _**AMD**_ box. Then, under _**VM.Standard.E4.Flex**_, in the _**Number of CPU**_ input box enter _**2**_ and wait until the _**Amount of memory (GB)**_ input box gets automatically populated with the value _**32**_. Afterwards click on _**Select Shape**_
+- [すべてのシェイプを参照]ウィンドウで、**[AMD]** ボックスをクリックします。 次に、**VM.Standard.E4.Flex** の下の **[CPUの数]** 入力ボックスに **2** と入力し、**[メモリの量（GB）]** 入力ボックスに値 **32** が自動的に入力されるまで待ちます。その後、[シェイプの選択]をクリックします
 
 ![](images/Lab2-8.png)
 
 ### **Step 2.9:**
-- Go to the _**Networking**_ section
-- If the section is collapes, click on _**Edit**_ to expand it.
-- In the selector, make sure you select the _**mds-replication-hol-vcn**_ in the VCN drop down selector and the _**Public Subnet-mds-replication-hol-vcn (Regional)**_ in the subnet drop down selector.
-- Make sure that the _**Assign a public IPv4 address**_ radio button is selected.
-
+- **ネットワーキング** セクションに移動します
+- セクションが折りたたまれている場合は、**編集** をクリックして展開します。
+- セレクターで、VCNドロップダウンセレクターの **mds-replication-hol-vcn** と **パブリック-サブネット-mds-replication-hol-vcn（regional）** を選択していることを確認してください。 サブネットドロップダウンセレクターで。
+- **パブリックIPv4アドレスの割り当て** ラジオボタンが選択されていることを確認します。 
 ![](images/Lab2-9.png)
 
 ### **Step 2.10:**
