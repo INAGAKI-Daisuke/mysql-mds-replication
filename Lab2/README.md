@@ -105,16 +105,16 @@ runcmd:
 - './setup.sh'
 final_message: "The system is finally up, after $UPTIME seconds"
 ```
-This is a cloud init script which will install automatically MySQL Community Edition, intialize it to work as a Replication Source and import the sample "world" database.
+これは、MySQL Community Editionを自動的にインストールし、レプリケーションソースとして機能するように初期化し、サンプルの「ワールド」データベースをインポートするクラウド初期化スクリプトです
 
-_**MAKE SURE TO COPY AND PASTE THE SCRIPT CORRECTLY!!**_
+_**スクリプトを正しくコピーして貼り付けてください。**_
 
-Once done, click _**Create**_
+完了したら、**作成** をクリックします
 
 ![](images/Lab2-14.png)
 
-_**Additional extra information (NOT needed for the scopes of this lab)**_ :
-As you might have realized, the cloud-init script which we are using, generates and runs a script from a base64 encoded string. This has been done in order to avoid issues which may occur when cloud-init processes special characters. For your reference, you can find the content of the script below:
+_**追加情報（このラボのスコープには必要ありません）**_：
+お気づきかもしれませんが、私たちが使用しているcloud-initスクリプトは、base64でエンコードされた文字列からスクリプトを生成して実行します。 これは、cloud-initが特殊文字を処理するときに発生する可能性のある問題を回避するために行われました。 参考までに、スクリプトの内容を以下に示します。:
 ```
 sed -i s/SELINUX=enforcing/SELINUX=permissive/g /etc/sysconfig/selinux
 sed -i s/SELINUX=enforcing/SELINUX=permissive/g /etc/selinux/config
