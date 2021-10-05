@@ -141,21 +141,20 @@ tar -xf world_x-db.tar.gz --strip-components=1
 mysql -uroot -pOracle.123 -h127.0.0.1 -P3306 < world_x.sql
 reboot
 ```
-**PLEASE NOTE:** This is a lab environment! We are showing you how to disable firewalld and selinux JUST for simplicity!! You are not intended ever to deploy this kind of configuration on a production environment since it may lead to serious security issues!!
+**注意：** これはラボ環境です！ 簡単にするために、firewalldとselinuxを無効にする方法を紹介します!! 深刻なセキュリティ問題につながる可能性があるため、この種の構成を実稼働環境にデプロイすることは意図されていません。 
 
 ### **Step 2.14:**
-- The instance will enter _**Provisioning**_ state.
+- インスタンスは _**プロビジョニング**_ 状態になります 
 
 ![](images/Lab2-15.png)
 
 ### **Step 2.15:**
-- Once provisioning is finished, the instance will enter the _**Running**_ state. It should take about a minute or so.
-Once the instance is _**Running**_, take note of the _**Public IP Address**_
+-プロビジョニングが完了すると、インスタンスは _**実行中**_ 状態になります。 約1分ほどかかります。
+インスタンスが_**実行中**_ になったら、_**パブリックIPアドレス**_ をメモします 
 
 ![](images/Lab2-16.png)
 
-_**PLEASE NOTE**_: As soon as the instance enters the running state, the cloud-init script is triggered and requires some other minutes to complete. In the meanwhile, we will start connecting to the instance.
-
+_**注意**_：インスタンスが実行状態に入るとすぐに、cloud-initスクリプトがトリガーされ、完了するまでにさらに数分かかります。 その間に、インスタンスへの接続を開始します。 
 ### **Step 2.16:**
 - We will now access the newly created instance using cloud shell.
 Click on the _**Cloud Shell**_ icon in the top right part of the screen.
@@ -203,23 +202,22 @@ mysql -uroot -pOracle.123
 ![](images/Lab2-21.png)
 
 ### **Step 2.21:**
-- Once connected to the MySQL server, execute the following command  to list the existing databases
+- MySQLサーバーに接続したら、次のコマンドを実行して既存のデータベースを一覧表示します 
 ```
 show databases;
 ```
-You will notice a schema called _**world_x**_
+_**world_x**_ というスキーマがあります
 
 ![](images/Lab2-22.png)
 
 ### **Step 2.22:**
-- Type _**exit**_ to close the MySQL session and again _**exit**_ to close the ssh session.
-- Reduce the Cloud Shell to icon and proceed to the following lab.
-
+- _**exit**_ と入力してMySQLセッションを閉じ、もう一度 _**exit**_ と入力してsshセッションを閉じます。
+- Cloud Shellをアイコンに縮小し、次のラボに進みます。  
 ![](images/Lab2-23.png)
 
 ## Conclusion
 
-Now that you have created your Replication Source, you are ready to progress to the next Lab!
+レプリケーションソースを作成したので、次のラボに進む準備ができました
 
 Learn more about **[Compute Instances](https://docs.oracle.com/en-us/iaas/Content/Compute/Concepts/computeoverview.htm)**
 Learn more about **[Cloud-init](https://cloudinit.readthedocs.io/en/latest/index.html)**
