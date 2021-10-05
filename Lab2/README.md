@@ -44,12 +44,9 @@ Oracle Cloud Infrastructure Cloud（OCI）シェルは、Oracle CloudConsoleか�
 ![](images/Lab2-3.png)
 
 ### **Step 2.4:**
-- In the _**Image and shape**_ section, you can define the operating system image to be used and the resources to be assigned.
-- If the section is collapes, click on _**Edit**_ to expand it.
-
-![](images/Lab2-4a.png)
-
-- In the _**Image**_ subsection click on the _**Change Image**_ button.
+- _ **イメージとシェイプ** _セクションで、使用するオペレーティングシステムイメージと割り当てるリソースを定義できます。
+- セクションが折りたたまれている場合は、_ **編集** _をクリックして展開します。
+- _ ** イメージ ** _サブセクションで、_ ** イメージの変更 ** _ボタンをクリックします。 
 
 ![](images/Lab2-4.png)
 
