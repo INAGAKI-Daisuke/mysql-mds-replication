@@ -77,24 +77,22 @@ Oracle Cloud Infrastructure Cloud（OCI）シェルは、Oracle CloudConsoleか�
 ![](images/Lab2-9.png)
 
 ### **Step 2.10:**
-- In the _**Add SSH keys**_ section, make sure you select _**Generate a key pair for me**_ and then click on _**Save Private Key**_
-
+- **SSHキーの追加** セクションで、**[キーペアを自動で生成]** を選択し、**[秘密キーを保存]** をクリックしてください
 ![](images/Lab2-10.png)
 
-- Once the private key gets saved to your local machine, take note of the download location and of the file name.
-
+- 秘密鍵がローカルマシンに保存されたら、ダウンロード場所とファイル名をメモします
 ### **Step 2.11:**
-- Scroll down and click on _**Show advanced options**_
+- 下にスクロールして、_**拡張オプションを表示**_ をクリックします。
 
 ![](images/Lab2-12.png)
 
 ### **Step 2.12:**
-- In the _**Management**_ tab, select the _**Paste cloud-init script**_ radio button. The _**Cloud-init script**_ input box will appear as per below image
+- **管理** タブで、**cloud-initスクリプトの貼り付け** ラジオボタンを選択します。 Cloud-initスクリプト入力ボックスは下の画像のように表示されます
 
 ![](images/Lab2-13.png)
 
 ### **Step 2.13:**
-- Copy and paste-in the following script, using the GitHub code copy function (copy button appears on the left on mouse hover):
+- GitHubコードコピー機能を使用して、次のスクリプトをコピーして貼り付けます（コピーボタンはマウスホバーの左側に表示されます） :
 ```
 #cloud-config
 # Source: https://cloudinit.readthedocs.io/en/latest/topics/examples.html#yaml-examples
