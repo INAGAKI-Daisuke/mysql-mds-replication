@@ -174,22 +174,22 @@ _**注意**_：インスタンスが実行状態に入るとすぐに、cloud-in
 ![](images/Lab2-20.png)
 
 ### **Step 2.20:**
-_**PLEASE NOTE**_: In this step we will connect  to the MySQL Replication Source instance. Prior to executing this step, allow it an extra couple of minutes for the cloud-init script to complete its execution and for the instance to reboot.
+_**注意**_：このステップでは、MySQLレプリケーションソースインスタンスに接続します。 この手順を実行する前に、cloud-initスクリプトが実行を完了し、インスタンスが再起動するまで、さらに数分待ちます。 
 
-- In order to connect to the Replication Source Instance using the _**Public IP Address**_, execute the following steps:
+- _**パブリックIPアドレス**_ を使用してレプリケーションソースインスタンスに接続するには、次の手順を実行します 
 
-a - Rename the recently transferred private key file and assign the privileges required by OCI:
+a - 最近転送された秘密鍵ファイルの名前を変更し、OCIに必要な特権を割り当てます :
 ```
 mv ssh-*.key replication-source.key
 chmod 600 replication-source.key
 ```
-b - Connect to the newly created _**MySQL Replication Source**_ instance over ssh, replacing the  _**Public IP Address**_ after the "@":
+b - 新しく作成された _**MySQL Replication Source**_ インスタンスにssh経由で接続し、「@」の後に _**パブリックIPアドレス**_ を置き換えます。 :
 ```
 ssh -i replication-source.key opc@<source-instance-public-ip>
 ```
-c - If prompted to accept fingerprints, enter _**yes**_
+c - acceptを受け入れるように求められたら、_**yes**_ と入力します
 
-d - Once successfully connected to the replication source instance, execute the following command:
+d - レプリケーションソースインスタンスに正常に接続されたら、次のコマンドを実行します :
 ```
 mysql -uroot -pOracle.123
 ```
