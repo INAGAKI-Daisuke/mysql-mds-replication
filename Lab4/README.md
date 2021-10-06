@@ -56,13 +56,12 @@ IPSec接続は、オンプレミス環境をOCIに接続するために使用さ
 ![](images/Lab4-6.png)
 
 ### **Step 4.7:**
-- _**シェイプ**_ サブセクションで _**シェイプの変更**_ をクリックします 
+- _**shape**_ サブセクションで _**シェイプの変更**_ をクリックします 
 
 ![](images/Lab4-7.png)
 
 ### **Step 4.8:**
-- In the _**Browse All Shapes**_ window, click on the _**AMD**_ box. Then, under _**VM.Standard.E4.Flex**_,  in the _**Number of CPU**_ input box enter _**2**_ and wait until the _**Amount of memory (GB)**_ input box gets automatically populated with the value _**32**_. Afterwards click on _**Select Shape**_
-
+- _**すべての形状を参照**_ ウィンドウで、_**AMD**_ ボックスをクリックします。 次に、_**VM.Standard.E4.Flex**_ の下の _**OCPUの数**_ 入力ボックスに _**2**_ と入力し、_**Memory（GB ）**_ 入力ボックスには、値 _**32**_ が自動的に入力されます。 その後、_ **シェイプの選択**_ をクリックします 
 ![](images/Lab4-8.png)
 
 ### **Step 4.9:**
