@@ -8,11 +8,9 @@
 - レプリケーションソースを指すようにMySQLルーター構成を変更し、接続をテストします
 
 ## Introduction
-In this lab we will deploy a compute instance which will host MySQL Router.
-As you have noticed, MySQL Database Service DB System is exposing a Private IP address only, therefore cannot natively communicate via the public internet.
-Communication with the public internet can be achieved in two ways:
-- Setting up an IPSec VPN connection between your OCI tenancy and your on premise data center: **[IPSec Overview](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/managingIPsec.htm)**
-- Using a MySQL Router running on a Compute Instance, with access to the Public Internet, to act as a reverse proxy, routing the database traffic, received over the OCI internal network, to the source on-premise MySQL instance. Even if the MySQL Router it is originally intended to provide a transparent routing layer for an on-premise high-availability setup, if configured to do so, can provide also simple routing towards a single instance.
+このラボでは、MySQLルーターをホストするコンピューティングインスタンスをデプロイします。 お気づきのとおり、MySQLデータベースサービスDBシステムはプライベートIPアドレスのみを公開しているため、パブリックインターネットを介してネイティブに通信することはできません。 パブリックインターネットとの通信は、次の2つの方法で実現できます:
+- OCIテナンシーとオンプレミスデータセンター間のIPSecVPN接続のセットアップ：**[IPSecの概要]（https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/managingIPsec.htm）** 
+- パブリックインターネットにアクセスできるコンピュートインスタンスで実行されているMySQLルーターを使用して、リバースプロキシとして機能し、OCI内部ネットワークを介して受信したデータベーストラフィックをソースのオンプレミスMySQLインスタンスにルーティングします。 MySQLルーターは、元々、オンプレミスの高可用性セットアップに透過的なルーティングレイヤーを提供することを目的としていますが、そうするように構成されている場合は、単一のインスタンスへの単純なルーティングも提供できます。 
 **[MySQL Router Overview](https://www.mysql.com/it/products/enterprise/router.html)**
 
 IPSec connectivity it is **the most secure** approach to be used in order to connect your on-premise environment with OCI. In this hands-on lab, for simplicity, we expose the database traffic via the public internet using MySQL Router.
