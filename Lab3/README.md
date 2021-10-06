@@ -1,37 +1,36 @@
-# Lab 3: Create MySQL DB System (MDS) to use as Replica
+# Lab 3: MDSの構築
 
 ![](images/Lab3-0.png)
 
-## Key Objectives:
-- Learn how to deploy and configure a Standalone MySQL Database Service.
-- Learn how to create the Administrator user for the MySQL Database Service.
+## 目的:
+- スタンドアロンMySQLデータベースサービスをデプロイおよび構成する方法を学習します
+- MySQLデータベースサービスの管理者ユーザーを作成する方法を学びます
 
 ## Introduction
 
-MySQL Database Service is a fully managed Oracle Cloud Infrastructure native service, developed, managed, and supported by the MySQL team in Oracle. Oracle automates all tasks such as backup and recovery, database and operating system patching, and so on. You are responsible solely for managing your data, schema designs, and access policies.
+MySQLデータベースサービスは、フルマネージドのOracle Cloud Infrastructureネイティブサービスであり、OracleのMySQLチームによって開発、管理、およびサポートされています。 Oracleは、バックアップとリカバリ、データベースとオペレーティングシステムのパッチ適用などのすべてのタスクを自動化します。 お客様は、データ、スキーマ設計、およびアクセスポリシーの管理のみを担当します。
 **[MySQL Database Service overview](https://docs.oracle.com/en-us/iaas/mysql-database/doc/overview-mysql-database-service.html)**
 
 
 ## Steps
 
 ### **Step 3.1:**
-- From the main menu on the left select _**Databases >> DB Systems**_
+- 左メニューより _**データベース >> DBシステム**_ を選択する
 
 ![](images/Lab3-1.png)
 
 ### **Step 3.2:**
-- The previous step will bring you to the DB System creation page. 
-Look at the compartment selector on the left and check that you are using the same compartment used to create the VCN. Once done, click on _**Create MySQL DB System**_.
+- 前の手順で、DBシステムの作成ページに移動します。左側のコンパートメントセレクターを見て、VCNの作成に使用したのと同じコンパートメントを使用していることを確認します。 完了したら、_**MySQL DBシステムの作成**_ をクリックします。 
 
 ![](images/Lab3-2.png)
 
 ### **Step 3.3:**
-- Start creating the DB System. Cross check again the compartment and assign to the DB System the name _**mds-replication-hol-replica**_ and select the _**Standalone**_ box. This will allow to create a standalone MySQL DB System to be used as a replica. Ignore other boxes.
-  
+- DBシステムの作成を開始します。 コンパートメントを再度クロスチェックし、DBシステムに名前 _**mds-replication-hol-replica**_ を割り当て、_**スタンドアロン**_ ボックスを選択します。 これにより、レプリカとして使用するスタンドアロンのMySQLDBシステムを作成できます。 他のボックスは無視してください。 
+
 ![](images/Lab3-3.png)
 
 ### **Step 3.4:**
-  In the _**Create Administrator Credential**_ section enter the following:
+  _**管理者資格証明書の作成**_ には以下を入力します:
 ```
 username: admin
 password: Oracle.123
@@ -41,49 +40,50 @@ confirm password: Oracle.123
 ![](images/Lab3-4.png)
 
 ### **Step 3.5:**
-- In the _**Configure Networking**_ section make sure you select the _**mds-replication-hol**_ VCN and the _**Public Subnet**_ where you have added Ingress Rules in the security list (_**Public Subnetmds-replication-hol-vcn**_).
+- _**ネットワーキングの構成**_ にはVCNには _**mds-replication-hol**_ と _**パブリックサブネット**_ の選択肢から (_**パブリック・サブネット-replication-hol-vcn**_)を指定します
 
-- Leave the default availability domain and proceed to the _**Configure Hardware**_ section.
+- デフォルトの可用性ドメインのままにして、_**ハードウェアの構成**_　セクションに進みます
 
 ![](images/Lab3-5.png)
 
 ### **Step 3.6:**
-- Confirm that in the _**Configure Hardware**_ section, the selected shape is MySQL.VM.Standard.E3.1.8GB, CPU Core Count: 1, Memory Size: 8 GB, Data Storage Size: 50.
+- _**ハードウェアの構成**_ セクションで、選択した形状が **MySQL.VM.Standard.E3.1.8GB、CPUコア数：1、メモリサイズ：8 GB、データストレージサイズ：50** であることを確認します。
 
-- In the _**Configure Backup**_ section leave the default backup window of 7 days.
+- _**バックアップの構成**_ セクションで、デフォルトのバックアップウィンドウを7日間のままにします。 
 
 ![](images/Lab3-6.png)
 
 ### **Step 3.7:**
-- Scroll down and click on _**Show Advanced Options**_ 
+- スクロールダウンにて _**拡張オプションの表示**_ をクリックします 
 
-- In the Configuration tab click on _**Select Configuration**_
+- 構成タブ内の _**構成の選択**_　をクリックします
 
 ![](images/Lab3-7.png)
 
 ### **Step 3.8:**
-- In the _**Browse All Configurations**_ window, select _**MySQL.VM.Standard.E3.1.8GB.Standalone**_, and click the button _**Select a Configuration**_ 
+- _**すべてのタイプ**_ ウィンドウで、_**MySQL.VM.Standard.E3.1.8GB.Standalone**_ を選択し、_**構成の選択**_ をクリックします。 
 
 ![](images/Lab3-8.png)
 
 ### **Step 3.9:**
-- After the configuration has been selected, go to the _**Networking**_ tab, and in the _**Hostname**_ field enter _**mysql-replication-hol-replica**_ (same as DB System Name). 
-Check that port configuration corresponds to the following:
-MySQL Port: 3306
-MySQL X Protocol Port: 33060
-Once done, click the _**Create**_ button.
+- 構成を選択したら、_**ネットワーク**_ タブに移動し、_**ホスト名**_ フィールドに _**mysql-replication-hol-replica**_ （DBシステム名と同じ）と入力します。 
+ポート構成が以下に対応していることを確認してください :
+ - MySQL Port: 3306
+ - MySQL X Protocol Port: 33060
+
+確認後 _**作成**_ ボタンを押下します
 
 ![](images/Lab3-9.png)
 
 ### **Step 3.10:**
-- The MySQL DB System will enter _**CREATING**_ state (as per picture below). Meanwhile you can go ahead and proceed to the next Lab.
+- MySQL DBシステムは　_**作成中**_　状態になります（下の図のように）。 その間、先に進んで次のラボに進むことができます。 
 
 ![](images/Lab3-10.png)
 
 ## Conclusion
 
-In this Lab you deployed MySQL Database Service and created the administration user for the database. All set and ready to replicate? Not yet, as you might have noticed the MySQL Database Service does not expose any Public IP, therefore we will need to expose one via a bastion host where we will install MySQL Router
- 
+このラボでは、MySQLデータベースサービスをデプロイし、データベースの管理ユーザーを作成しました。 すべて設定され、複製する準備ができていますか？ まだ、MySQLデータベースサービスがパブリックIPを公開していないことに気付いたかもしれませんが、MySQLルーターをインストールする踏み台ホストを介して公開する必要があります。 
+
 Learn more about **[MySQL Database Service](https://docs.oracle.com/en-us/iaas/mysql-database/doc/overview-mysql-database-service.html)**
 
 **[<< Go to Lab 2](../Lab2/README.md)** | **[Home](/README.md)** | **[Go to Lab 4 >>](../Lab4/README.md)**
