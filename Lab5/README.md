@@ -1,48 +1,50 @@
-# Lab 5: Create the Replication Channel
+# Lab 5: MDSへのReplication
 
 ![](images/Lab5-0.png)
 
 ## Key Objectives:
-- Learn how to create an MySQL Database Service Replication Channel in OCI to use inbound replication
-- Learn how to check the status of the replication
+- インバウンドレプリケーションを使用するためにOCIでMySQLデータベースサービスレプリケーションチャネルを作成する方法を学習します
+- レプリケーションのステータスを確認する方法を学ぶ 
 
 ## Introduction
 
-In this lab you will set up inbound replication for your MySQL Database Service instance.
+このラボでは、MySQLデータベースサービスインスタンスのインバウンドレプリケーションを設定します。
 
-Replication enables data from one MySQL database server (known as a source) to be copied to one or more MySQL database servers (known as replicas). Replication is asynchronous by default; replicas do not need to be connected permanently to receive updates from a source.
+レプリケーションを使用すると、1つのMySQLデータベースサーバー（ソースと呼ばれる）からのデータを1つ以上のMySQLデータベースサーバー（レプリカと呼ばれる）にコピーできます。 レプリケーションはデフォルトで非同期です。 ソースから更新を受信するために、レプリカを永続的に接続する必要はありません。 In this lab you will set up inbound replication for your MySQL Database Service instance.
+
 **[MySQL Replication Overview](https://dev.mysql.com/doc/refman/8.0/en/replication.html)**
 
-In OCI, Inbound Replication requires a replication channel configured in MySQL Database Service, connecting a correctly configured MySQL Source to a DB System target.
+OCIでは、インバウンドレプリケーションには、MySQLデータベースサービスで構成されたレプリケーションチャネルが必要であり、正しく構成されたMySQLソースをDBシステムターゲットに接続します。 
+
 **[MySQL Database Service Inbound Replication Overview](https://docs.oracle.com/en-us/iaas/mysql-database/doc/replication.html)**
 
-**Please Note:** when you will configure the replication channel, you will use the **MySQL Router Private Hostname** as a replication source, since your MySQL Database Service instance is not directly connected with the Public Internet.
+**Please Note:** MySQLデータベースサービスインスタンスはパブリックインターネットに直接接続されていないため、レプリケーションチャネルを構成するときは、レプリケーションソースとして**MySQL Router Private Hostname**を使用します。 
 
 
 
 ## Steps
 
 ### **Step 5.1:**
-- From the main menu on the top left corner select _**Databases >> Channels**_
+- 左上隅のメインメニューから _**データベース >> Channels** を選択します 
 
 ![](images/Lab5-1.png)
 
 ### **Step 5.2:**
-- Click on the _**Create Channel**_ button
+- _**チャネルの作成**_ をクリック
 
 ![](images/Lab5-2.png)
 
 ### **Step 5.3:**
-- Check that _**Create in Compartment**_ drop down list shows the same compartment name which you have been using so far (_**mds-replication-hol**_)
-- Leave the default _**Name**_ (you can also change it if you wish)
+-　_**コンパートメントに作成**_　ドロップダウンリストに、これまで使用していたのと同じコンパートメント名が表示されていることを確認します（　_**mds-replication-hol**_ ）
+- デフォルトの _**名前**_ のままにします（必要に応じて変更することもできます） 
 
 ![](images/Lab5-3.png)
 
 ### **Step 5.4:**
-- The _**Source Connection**_ section allows you to configure the parameters to set the replication with the MySQL Source Instance.
-
-- _**PLEASE NOTE**_: Since the MySQL Database Service DB System _**DOES NOT**_ have direct access to the internet, as mentioned in the introduction, you will be using the _**MySQL Router Internal FQDN**_ as _**Source Hostname**_.
-You can retrieve it from the MySQL Router Compute Instance details page (_**Main Menu >> Compute >> Instances >> click on the MySQL Router instance**_), as per below picture:
+- _**ソース接続**_セクションでは、MySQLソースインスタンスでレプリケーションを設定するためのパラメータを設定できます。 
+- 
+- _**注意**_: はじめに述べたように、MySQLデータベースサービスDBシステムはインターネットに直接アクセスできないため、_**MySQL Routerの内部FQDN**_ を _**ソースホスト名*として使用します。**_
+次の図のように、MySQLルーターのコンピューティングインスタンスの詳細ページ（ _**メインメニュー>>コンピューティング>>インスタンス>> MySQLルーターインスタンスをクリック**_ ）から取得できます。 
 
 ![](images/Lab5-4a.png)
 
@@ -158,12 +160,12 @@ To connect again to _**MySQL Database Service Replica Instance**_ and check if t
 mysqlsh --uri root:Oracle.123@<mds-private-ip>:3306 --sql
 show databases;
 ```
-The result should be similar to the below image.
+結果は次の画像のようになります
 ![](images/Lab5-10.png)
 
 ## Conclusion
 
-In this last lab you have successfully created a replication channel and replicated data from your source instance!!
+この最後のラボでは、レプリケーションチャネルを正常に作成し、ソースインスタンスからデータをレプリケートしました。 !!
 
 Learn more about **[MySQL Replication](https://dev.mysql.com/doc/refman/8.0/en/replication.html)**
 Learn more about **[MySQL Database Service Inbound Replication](https://docs.oracle.com/en-us/iaas/mysql-database/doc/replication.html)**
