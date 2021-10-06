@@ -41,8 +41,7 @@ OCIでは、インバウンドレプリケーションには、MySQLデータベ
 ![](images/Lab5-3.png)
 
 ### **Step 5.4:**
-- _**ソース接続**_セクションでは、MySQLソースインスタンスでレプリケーションを設定するためのパラメータを設定できます。 
-- 
+- _**ソース接続**_ セクションでは、MySQLソースインスタンスでレプリケーションを設定するためのパラメータを設定できます。 
 - _**注意**_: はじめに述べたように、MySQLデータベースサービスDBシステムはインターネットに直接アクセスできないため、_**内部FQDN**_ を _**ソースホスト名**_ として使用します。
 次の図のように、MySQLルーターのコンピューティングインスタンスの詳細ページ（ _**メインメニュー>>コンピューティング>>インスタンス>> MySQLルーターインスタンスをクリック**_ ）から取得できます。 
 
@@ -59,26 +58,26 @@ OCIでは、インバウンドレプリケーションには、MySQLデータベ
 
 ![](images/Lab5-4b.png)
 
-_**注意**_: This is a Lab environment, therefore, for the sake of simplicity, we have disabled encryption in the replication channel. If you will be configuring MySQL Database Service replication channel on a real environment (production, test, dev... doesn't matter) you should _**ALWAYS**_ set _**SSL Mode**_ to _**REQUIRED (REQUIRED)**_.
+_**注意**_: これはラボ環境であるため、簡単にするために、レプリケーションチャネルの暗号化を無効にしました。 実際の環境（本番環境、テスト環境、開発環境など）でMySQLデータベースサービスレプリケーションチャネルを構成する場合は、_**常に**_ _**SSLモード**_ を _ **必須（REQUIRED）** _ に設定する必要があります。
 
 ### **Step 5.5:**
-- The _**Target**_ section allows you to choose the _**MySQL Database Service DB System**_ which you will select as _**Replica**_
+-　_**ターゲット**_　セクションでは、_**Replica**_　として選択する　_**MySQL Database Service DB System**_　を選択できます。
 
-- In the _**Applier Username**_ input box enter _**admin**_. Leave the _**Channel Name**_ as per default.
+-　_**Applier ユーザ名**_ 入力ボックスに _**admin**_ と入力します。 _**channel名**_ はデフォルトのままにしておきます。
 
-- If the subsection _**Select a DB System**_ shows _**No DB System selected**_, click the button _**Select DB System**_.
+- サブセクション _**DBシステムの選択**_ に _**DBシステムが選択されていません**_ と表示されている場合は、_**DBシステムの選択**_ ボタンをクリックします。
 
-- If the subsection _**Select a DB System**_ shows already the previously created MySQL Database Service instance, go to Step 5.7
+- サブセクション _**DBシステムの選択**_ に以前に作成されたMySQLデータベースサービスインスタンスが表示されている場合は、ステップ5.7に進みます。 
 
 ![](images/Lab5-5.png)
 
 ### **Step 5.6:**
-- In the window _**Select a DB System**_, select the _**mds-replication-hol-replica**_ which you have previously created and then click the button _**Select DB System**_.
+- ウィンドウ _**DBシステムの選択**_ で、以前に作成した _**mds-replication-hol-replica**_ を選択し、_**DBシステムの選択**_ ボタンをクリックします
 
 ![](images/Lab5-6.png)
 
 ### **Step 5.7:**
-- Click _**Create Channel**_
+- _**チャネルの作成**_ をクリック
 
 ![](images/Lab5-7.png)
 
