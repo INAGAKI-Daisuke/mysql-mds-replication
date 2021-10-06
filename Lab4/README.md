@@ -185,8 +185,7 @@ _**注意**_: 上記のコマンドを変更して _**MySQLレプリケーショ
 _**sudo sed -i s/SOURCE_PUBLIC_IP/150.230.199.4/g /etc/mysqlrouter/mysqlrouter.conf**_
 
 
-- 完了したら、構成ファイルの内容をチェックして、変数 _**destinations**_ が _**レプリケーションソースのパブリックIPアドレス**_ と等しいことを確認します
-To do it, execute:
+- 完了したら、構成ファイルの内容をチェックして、変数 _**destinations**_ が _**レプリケーションソースのパブリックIPアドレス**_ と等しいことを確認します:
 ```
 cat /etc/mysqlrouter/mysqlrouter.conf
 ```
