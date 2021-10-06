@@ -33,15 +33,15 @@ IPSec接続は、オンプレミス環境をOCIに接続するために使用さ
 ![](images/Lab4-2.png)
 
 ### **Step 4.3:**
--　_**名前**_ フィールドに、_**mysql-replication-router**_ （または都合のよい他の名前）を挿入します。
+- _**名前**_ フィールドに、_**mysql-replication-router**_ （または都合のよい他の名前）を挿入します。
 
-- _**配置**_　セクションは、AvailabilityDomainとFaultDomainを変更できるセクションです。 このワークショップの範囲では、すべてをデフォルトのままにします。 
+- _**配置**_ セクションは、AvailabilityDomainとFaultDomainを変更できるセクションです。 このワークショップの範囲では、すべてをデフォルトのままにします。 
 ![](images/Lab4-3.png)
 
 ### **Step 4.4:**
-- In the _**Image and shape**_ section, you can define the operating system image to be used and the resources to be assigned.
-- If the section is collapsed, click on _**Edit**_ to expand it.
-- In the _**Image**_ subsection click on the _**Change Image**_ button.
+- _**イメージとシェイプ**_ セクションでは、使用するオペレーティングシステムイメージと割り当てるリソースを定義できます
+- セクションが折りたたまれている場合は、_**編集**_ をクリックして展開します
+- _**イメージ**_ サブセクションで、_**イメージの変更**_ ボタンをクリックします
 
 ![](images/Lab4-4.png)
 
