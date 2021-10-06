@@ -9,7 +9,8 @@
 
 ## Introduction
 このラボでは、MySQLルーターをホストするコンピューティングインスタンスをデプロイします。 お気づきのとおり、MySQLデータベースサービスDBシステムはプライベートIPアドレスのみを公開しているため、パブリックインターネットを介してネイティブに通信することはできません。 パブリックインターネットとの通信は、次の2つの方法で実現できます:
-- OCIテナンシーとオンプレミスデータセンター間のIPSecVPN接続のセットアップ：**[IPSecの概要]（https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/managingIPsec.htm）** 
+- OCIテナンシーとオンプレミスデータセンター間のIPSecVPN接続のセットアップ：**[IPSecの概要](https://docs.oracle.com/en-us/iaas/Content/Network/Tasks/managingIPsec.htm)**
+- 
 - パブリックインターネットにアクセスできるコンピュートインスタンスで実行されているMySQLルーターを使用して、リバースプロキシとして機能し、OCI内部ネットワークを介して受信したデータベーストラフィックをソースのオンプレミスMySQLインスタンスにルーティングします。 MySQLルーターは、元々、オンプレミスの高可用性セットアップに透過的なルーティングレイヤーを提供することを目的としていますが、そうするように構成されている場合は、単一のインスタンスへの単純なルーティングも提供できます。 
 **[MySQL Router Overview](https://www.mysql.com/it/products/enterprise/router.html)**
 
