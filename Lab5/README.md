@@ -82,12 +82,12 @@ _**注意**_: これはラボ環境であるため、簡単にするために、
 ![](images/Lab5-7.png)
 
 ### **Step 5.8:**
-- If you executed correctly all the previous steps, the replication channel will be provisioned with no issues and it will turn into _**Active**_ state.
+- これまでのすべての手順を正しく実行すると、レプリケーションチャネルは問題なくプロビジョニングされ、_**アクティブ**_ 状態になります。 
 
 ![](images/Lab5-8.png)
 
-- _**Congratulations!! You managed to succesfully set up a replicated environment using MySQL Database Service!!**_
-In the next few steps, you will verify that everyhing works as expected and observe replication in action!!
+- _**Congratulations!! MySQLデータベースサービスを使用して、レプリケートされた環境を正常にセットアップできました!!**_ 
+次のいくつかの手順では、すべてが期待どおりに機能することを確認し、レプリケーションの動作を確認します。 
 
 ### **Step 5.9:**
 - Go back to the Cloud Shell, which should still be connected the _**mysql-replication-router**_ instance
