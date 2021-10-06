@@ -176,13 +176,13 @@ c - If prompted to accept fingerprints, enter _**yes**_
 ```
 sudo sed -i 's/destinations =.*/destinations = <put-here-public-ip-of-mysql-replication-source>/g' /etc/mysqlrouter/mysqlrouter.conf
 ```
-_**Where do I get the MySQL Replication Source Public IP?**_
-Go to: _**Main Menu >> Compute >> Instances >>**_ Click on _**mysql-replication-source >>**_ Check for _**Public IP**_ (as per picture below).
+_**MySQLレプリケーションソースパブリックIPはどこで入手できますか？**_
+移動先：_**メインメニュー>>コンピューティング>>インスタンス>>**_ _**mysql-replication-source>>**_ をクリックします _**パブリックIP**_ を確認します（下図参照）  
 
 ![](images/Lab4-18b.png)
 
 _**注意**_: 上記のコマンドを変更して _**MySQLレプリケーションソースパブリックIPアドレス**_ を挿入すると、コマンドは次の例のようになります:
-_**sudo sed -i s/SOURCE_PUBLIC_IP/140.238.220.163/g /etc/mysqlrouter/mysqlrouter.conf**_
+_**sudo sed -i s/SOURCE_PUBLIC_IP/150.230.199.4/g /etc/mysqlrouter/mysqlrouter.conf**_
 
 
 - 完了したら、構成ファイルの内容をチェックして、変数 _**destinations**_ が _**レプリケーションソースのパブリックIPアドレス**_ と等しいことを確認します
