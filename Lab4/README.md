@@ -1,4 +1,4 @@
-# Lab 4: Create a MySQL Router Instance to connect MySQL Database Service with the Replication Source
+# Lab 4: Replicationの準備
 
 ![](images/Lab4-0.png)
 
@@ -197,37 +197,36 @@ cat /etc/mysqlrouter/mysqlrouter.conf
 ![](images/Lab4-19.png)
 
 ### **Step 4.19:**
-- It is now time to start the MySQL Router and to check the connection to the MySQL Replication Source.
-To do so execute the following steps:
+- 次に、MySQLルーターを起動し、MySQLレプリケーションソースへの接続を確認します。
+これを行うには、次の手順を実行します :
 
-a - Enable the mysqlrouter service to start on boot and start the mysqlrouter service
+a - mysqlrouterサービスを起動時に開始できるようにし、mysqlrouterサービスを開始します 
 ```
 sudo systemctl enable mysqlrouter
 sudo systemctl start mysqlrouter
 ```
 
-b - Access the mysqlrouter and test the router to the _**MySQL Replication Source**_
+b - mysqlrouterにアクセスし、ルーターを _**MySQL Replication Source**_ であることをテストします 
 ```
 mysqlsh --uri root:Oracle.123@127.0.0.1:3306 --sql
 select @@hostname;
 ```
-- Confirm that the hostname matches the Replication Source Hostname, as per picture below.
+- 次の図のように、ホスト名がレプリケーションソースのホスト名と一致することを確認します 
 
 ![](images/Lab4-20.png)
 
 ### **Step 4.20:**
-- Exit the MySQL Shell, executing the following command:
+- 次のコマンドを実行して、MySQLシェルを終了します :
 ```
 \exit
 ```
-- _**DO NOT**_ close the ssh connection to the MySQL Router Instance.
-- Reduce the Cloud Shell to icon and proceed to the following lab.
+- _**注意**_ MySQLルーターインスタンスへのssh接続は閉じないでください
+- クラウドシェルをアイコンに縮小し、次のラボに進みます
 
 
 ## Conclusion
-
-In this lab you have deployed and configured MySQL Router on a Compute Instance with public internet connectivity, and pointed it to the MySQL source instance. 
-You can now proceed to the next and last lab.
+このラボでは、パブリックインターネット接続を備えたコンピューティングインスタンスにMySQLルーターをデプロイして構成し、MySQLソースインスタンスをポイントしました。
+これで、次の最後のラボに進むことができます。 
 
 Learn more about **[MySQL Router](https://www.mysql.com/it/products/enterprise/router.html)**
 
