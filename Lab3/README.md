@@ -67,9 +67,9 @@ confirm password: Oracle.123
 
 ### **Step 3.9:**
 - 構成を選択したら、_**ネットワーク**_ タブに移動し、_**ホスト名**_ フィールドに _**mysql-replication-hol-replica**_ （DBシステム名と同じ）と入力します。 
-Check that port configuration corresponds to the following:
-MySQL Port: 3306
-MySQL X Protocol Port: 33060
+ポート構成が以下に対応していることを確認してください :
+-- MySQL Port: 3306
+-- MySQL X Protocol Port: 33060
 確認後 _**作成**_ ボタンを押下します
 
 ![](images/Lab3-9.png)
