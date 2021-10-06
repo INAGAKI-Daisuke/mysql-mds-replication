@@ -97,51 +97,50 @@ _**注意**_: _**MySQL Database Service**_　に接続するために、その�
 
 ![](images/Lab5-9a.png)
 
-To connect to the _**MySQL Database Service Replica Instance**_ and list existing schemas, execute the following commands:
+_**MySQL DatabaseServiceレプリカインスタンス**_ に接続して既存のスキーマを一覧表示するには、次のコマンドを実行します :
 ```
 mysqlsh --uri admin:Oracle.123@<mds-private-ip>:3306 --sql
 show databases;
 ```
-- You should see the _**world_x**_ schema, as in the picture below.
+- 次の図のように、_**world_x**_ スキーマが表示されます
 
 ![](images/Lab5-9b.png)
 
-- _**Optional**_: Execute the command
+- _**Optional**_: その他コマンド
 ```
 SHOW REPLICA STATUS\G
 ```
-The output should look as follows:
+出力は次のようになります:
 
 ![](images/Lab5-9c.png)
 
-_**Additional Explanation**_: If replication is working correctly you will see the _**Slave/Replica_IO_State**_ field marked as _**Waiting for master to send event**_ and the _**Last_Error**_ field marked empty.
-In case of errors in the replication, the _**Last_Error**_ field will contain an explanation of the error, which is going to be useful for troubleshooting.
+_**追加説明**_: レプリケーションが正しく機能している場合は、_**Slave/Replica_IO_State**_ フィールドに _**Waiting for master to send event**_ および _**Last_Error**_ とマークされています。 レプリケーションでエラーが発生した場合、_**Last_Error**_ フィールドにエラーの説明が含まれ、トラブルシューティングに役立ちます。 
 
 ### **Step 5.10:**
-- Exit the MySQL Shell connection to _**MySQL Database Service**_ typing:
+- _**MySQL Database Service**_ へのMySQLShell接続を終了します :
 ```
 \exit
 ```
 
 ### **Step 5.11:**
-- You will now connect to the _**MySQL Replication Source**_ over the _**Public IP Addrees**_ and create a dummy database.
+- ここで、_**パブリックPublicアドレス**_ を介して _**MySQL Replication Source**_ に接続し、ダミーデータベースを作成します。 
 
-_**PLEASE NOTE**_: In order to connect to _**MySQL Replication Source**_ we will use its _**Public IP Addrees**_. You can retrieve the _**Replication Source  Public IP Address**_ from the Replication Source Compute Instance details page (_**Main Menu >> Database >> (MySQL) DB Systems>> click on the Replication Source instance**_), as per below picture:
+_**注意**_: _**MySQL Replication Source**_ に接続するために、その _**パブリック IP Addrees**_ を使用します。 _**レプリケーションソースパブリックIPアドレス**_ は、レプリケーションソースコンピューティングインスタンスの詳細ページから取得できます（_**メインメニュー>>データベース>>（MySQL）DBシステム>>レプリケーションソースインスタンスをクリックします**_ ）、下図参照 :
 
 ![](images/Lab5-11.png)
 
-- To connect to the _**MySQL Replication Source**_ and create a new schema, execute the commands:
+- _**MySQL Replication Source**_　に接続して新しいスキーマを作成し、コマンドを実行します :
 ```
 mysqlsh --uri root:Oracle.123@<source-public-ip>:3306 --sql
 ```
-- After you have connected to the _**MySQL Replication Source**_, execute the following command:
+- _**MySQL Replication Source**_ に接続した後、次のコマンドを実行します :
 ```
 select @@hostname;
 ```
-...and make sure that the resulting hostname is _**mysql-replication-source**_.
-This additional check is done in order to make you sure you are connected to the right host, since we are about to write data. Writing data by mistake into the replication source would cause replication to break!
+...結果のホスト名が _**mysql-replication-source**_ であることを確認してください。
+この追加のチェックは、データを書き込もうとしているため、適切なホストに接続されていることを確認するために行われます。 レプリケーションソースに誤ってデータを書き込むと、レプリケーションが中断する可能性があります。 
 
-- Once you have checked that you are connected to the right host, execute the following commands:
+- 適切なホストに接続していることを確認したら、次のコマンドを実行します :
 ```
 create database test;
 \exit
