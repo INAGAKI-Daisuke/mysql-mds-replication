@@ -90,10 +90,10 @@ _**注意**_: これはラボ環境であるため、簡単にするために、
 次のいくつかの手順では、すべてが期待どおりに機能することを確認し、レプリケーションの動作を確認します。 
 
 ### **Step 5.9:**
-- Go back to the Cloud Shell, which should still be connected the _**mysql-replication-router**_ instance
-- From the _**mysql-replication-router**_ instance you will now access the _**MySQL Database Service Replica Instance**_ over the _**Private IP Address**_, to check that the content from the _**Replication Source**_ has been correctly replicated.
+- クラウドシェルに戻ります。クラウドシェルはまだ _**mysql-replication-router**_ インスタンスに接続されているはずです。
+- _**mysql-replication-router**_ インスタンスから、_**プライベートIPアドレス**_ を介して _**MySQLデータベースサービスレプリカインスタンス**_ にアクセスし、_**複製ソース**_ は正しく複製されました。
 
-_**PLEASE NOTE**_: In order to connect to _**MySQL Database Service**_ we will use its _**Private IP**_. You can retrieve the _**MySQL Database Service  Private IP Address**_ from the MySQL Database Service DB System details page (_**Main Menu >> Databases >> (MySQL) DB Systems >> click on the MySQL Database Service DB System**_), as per below picture:
+_**注意**_: _**MySQL Database Service**_　に接続するために、その　_**プライベートIP**_　を使用します。 _**MySQLデータベースサービスのプライベートIPアドレス**_　は、MySQLデータベースサービスのDBシステムの詳細ページから取得できます（_ **メインメニュー>>データベース>>（MySQL）DBシステム>> MySQLデータベースサービスDBをクリックします**_ ）、下図参照 :
 
 ![](images/Lab5-9a.png)
 
