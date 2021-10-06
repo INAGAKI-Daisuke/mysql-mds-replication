@@ -131,11 +131,10 @@ echo "bind_port = 3306" >> /etc/mysqlrouter/mysqlrouter.conf
 echo "destinations = SOURCE_PUBLIC_IP:3306" >> /etc/mysqlrouter/mysqlrouter.conf
 echo "routing_strategy = first-available" >> /etc/mysqlrouter/mysqlrouter.conf
 ```
-**PLEASE NOTE:** This is a lab environment! We are showing you how to disable firewalld and selinux JUST for simplicity!! You are not intended ever to deploy this kind of configuration on a production environment since it may lead to serious security issues!!
+**注意:** これはラボ環境です！ 簡単にするために、firewalldとselinuxを無効にする方法を紹介します!! 深刻なセキュリティ問題につながる可能性があるため、この種の構成を実稼働環境にデプロイすることは意図されていません!!
 
 ### **Step 4.14:**
-- The instance will enter _**Provisioning**_ state.
-
+- インスタンスは _**作成中**_ 状態になります
 ![](images/Lab4-15.png)
 
 ### **Step 4.15:**
