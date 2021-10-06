@@ -65,22 +65,21 @@ IPSec接続は、オンプレミス環境をOCIに接続するために使用さ
 ![](images/Lab4-8.png)
 
 ### **Step 4.9:**
-- Go the _**Networking**_ section.
-- If the section is collapsed, click _**Edit**_ to expand it.
-- Make sure you select the _**mds-replication-hol-vcn**_ in the VCN drop down selector and the _**Public Subnet-mds-replication-hol-vcn (Regional)**_ in the subnet drop down selector.
-- Make sure that the _**Assign a public IPv4 address**_ radio button is selected.
+- _**ネットワーキング**_ セクションに移動します
+- セクションが折りたたまれている場合は、_**編集**_ をクリックして展開します
+- VCNドロップダウンセレクターで _**mds-replication-hol-vcn**_ を選択し、サブネットドロップで _**パブリック・サブネット-mds-replication-hol-vcn（Regional）**_ を選択していることを確認してください ダウンセレクター
+- _**パブリックIPv4アドレスの割り当て**_ ラジオボタンが選択されていることを確認します
 
 ![](images/Lab4-9.png)
 
 ### **Step 4.10:**
-- In the _**Add SSH keys**_ section, make sure you select _**Generate a key pair for me**_ and then click on _**Save Private Key**_
+- _**SSHキーの追加**_ セクションで、必ず _**キーペアの生成**_ を選択し、_**秘密キーの保存**_ をクリックしてください。
 
 ![](images/Lab4-10.png)
 
-- Once the private key gets saved to your local machine, take note of the download location and of the file name.
+- 秘密鍵がローカルマシンに保存されたら、ダウンロード場所とファイル名をメモします
 
-_**PLEASE NOTE:**_ OCI generates for your private keys naming it after the date of creation (example: ssh-key-YYYY-MM-DD.key). If you generate two or more private keys in the same day, your operating system might modify the file name upon saving. For example, the current private key which you are saving might follow a naming convention of this kind: ssh-key-YYYY-MM-DD (1).key
-Therefore be careful and pay attention to the correct file name.
+_**注意:**_ OCIは、作成日以降に名前を付けた秘密鍵用に生成します（例：ssh-key-YYYY-MM-DD.key）。 同じ日に2つ以上の秘密鍵を生成すると、オペレーティングシステムが保存時にファイル名を変更する場合があります。 たとえば、保存している現在の秘密鍵は、次のような命名規則に従う場合があります：ssh-key-YYYY-MM-DD（1）.key　したがって、注意して正しいファイル名に注意してください。 
 
 ### **Step 4.11:**
 - Scroll down and after the _**Boot Volume**_ section, click on _**Show advanced options**_
