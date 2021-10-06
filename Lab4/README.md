@@ -46,17 +46,17 @@ IPSec接続は、オンプレミス環境をOCIに接続するために使用さ
 ![](images/Lab4-4.png)
 
 ### **Step 4.5:**
-- In the _**Browse All Images**_ window, select _**Oracle Linux**_, expand the drop down _**OS version**_ box, and select _**8**_
+- _**すべてのイメージを参照**_ ウィンドウで、_**Oracle Linux**_ を選択し、ドロップダウン _**OSバージョン**_ ボックスを展開して、_**8**_ を選択します。 
 
 ![](images/Lab4-5.png)
 
 ### **Step 4.6:**
-- Click on the _**Select Image**_ button
+- _**イメージの選択**_ ボタンをクリック
 
 ![](images/Lab4-6.png)
 
 ### **Step 4.7:**
-- In the _**Shape**_ subsection click on _**Change Shape**_
+- _**シェイプ**_ サブセクションで _**シェイプの変更**_ をクリックします 
 
 ![](images/Lab4-7.png)
 
