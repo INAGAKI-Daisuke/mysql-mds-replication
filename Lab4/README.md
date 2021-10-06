@@ -134,17 +134,16 @@ echo "routing_strategy = first-available" >> /etc/mysqlrouter/mysqlrouter.conf
 **注意:** これはラボ環境です！ 簡単にするために、firewalldとselinuxを無効にする方法を紹介します!! 深刻なセキュリティ問題につながる可能性があるため、この種の構成を実稼働環境にデプロイすることは意図されていません!!
 
 ### **Step 4.14:**
-- インスタンスは _**作成中**_ 状態になります
+- インスタンスは _**プロブロジョニング中**_ になります
 ![](images/Lab4-15.png)
 
 ### **Step 4.15:**
-- Once provisioning is finished, the instance will enter the _**Running**_ state. It should take about a minute or so.
-Once the instance is _**Running**_, take note of the _**Public IP Address**_ for ssh connection and of the _**Internal FQDN**_ for setting up the _**Replication Channel**_ later on.
+- プロビジョニングが完了すると、インスタンスは _**実行中**_ になります。 約1分ほどかかります。インスタンスが _**実行中**_ になったら、ssh接続用の _**パブリックIPアドレス**_ と _**レプリケーションチャネル**_ を設定するための _**内部FQDN**_ をメモします 
 
 ![](images/Lab4-16.png)
 
 ### **Step 4.16:**
-- Go back to the _**Cloud Shell**_, take the previously saved private key file from your local machine, drag and drop it into the cloud shell, as shown in the picture below.
+- 次の図に示すように、_**Cloud Shell**_ に戻り、以前に保存した秘密鍵ファイルをローカルマシンから取得し、クラウドシェルにドラッグアンドドロップします。 
 
 ![](images/Lab4-17.png)
 
