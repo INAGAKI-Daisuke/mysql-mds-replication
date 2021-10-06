@@ -47,30 +47,30 @@ confirm password: Oracle.123
 ![](images/Lab3-5.png)
 
 ### **Step 3.6:**
-- Confirm that in the _**Configure Hardware**_ section, the selected shape is MySQL.VM.Standard.E3.1.8GB, CPU Core Count: 1, Memory Size: 8 GB, Data Storage Size: 50.
+- _**ハードウェアの構成**_ セクションで、選択した形状が **MySQL.VM.Standard.E3.1.8GB、CPUコア数：1、メモリサイズ：8 GB、データストレージサイズ：50** であることを確認します。
 
-- In the _**Configure Backup**_ section leave the default backup window of 7 days.
+- _**バックアップの構成**_ セクションで、デフォルトのバックアップウィンドウを7日間のままにします。 
 
 ![](images/Lab3-6.png)
 
 ### **Step 3.7:**
-- Scroll down and click on _**Show Advanced Options**_ 
+- スクロールダウンにて _**拡張オプションの表示**_ をクリックします 
 
-- In the Configuration tab click on _**Select Configuration**_
+- 構成タブ内の _**構成の選択**_　をクリックします
 
 ![](images/Lab3-7.png)
 
 ### **Step 3.8:**
-- In the _**Browse All Configurations**_ window, select _**MySQL.VM.Standard.E3.1.8GB.Standalone**_, and click the button _**Select a Configuration**_ 
+- _**すべてのタイプ**_ ウィンドウで、_**MySQL.VM.Standard.E3.1.8GB.Standalone**_ を選択し、_**構成の選択**_ をクリックします。 
 
 ![](images/Lab3-8.png)
 
 ### **Step 3.9:**
-- After the configuration has been selected, go to the _**Networking**_ tab, and in the _**Hostname**_ field enter _**mysql-replication-hol-replica**_ (same as DB System Name). 
+- 構成を選択したら、_**ネットワーク**_ タブに移動し、_**ホスト名**_ フィールドに _**mysql-replication-hol-replica**_ （DBシステム名と同じ）と入力します。 
 Check that port configuration corresponds to the following:
 MySQL Port: 3306
 MySQL X Protocol Port: 33060
-Once done, click the _**Create**_ button.
+確認後 _**作成**_ ボタンを押下します
 
 ![](images/Lab3-9.png)
 
