@@ -3,9 +3,9 @@
 ![](images/Lab4-0.png)
 
 ## Key Objectives:
-- Learn how to create a compute instance in a specific compartment
-- Learn how to use Cloud Shell to connect to a compute instance via ssh
-- Modify the MySQL Router configuration to point to Replication Source and test the connection
+- 特定のコンパートメントにコンピューティングインスタンスを作成する方法を学ぶ
+- CloudShellを使用してssh経由でコンピューティングインスタンスに接続する方法を学ぶ
+- レプリケーションソースを指すようにMySQLルーター構成を変更し、接続をテストします
 
 ## Introduction
 In this lab we will deploy a compute instance which will host MySQL Router.
