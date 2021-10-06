@@ -170,9 +170,9 @@ c - If prompted to accept fingerprints, enter _**yes**_
 ![](images/Lab4-18.png)
 
 ### **Step 4.18:**
-- Once successfully connected to the instance where the MySQL Router is installed, we need to change the MySQL router configuration to point to the _**Replication Source**_, using the _**MySQL Replication Source Public IP Address**_. In a normal scenario, you should modify the MySQL router configuration file, located under _**/etc/mysqlrouter/mysqlrouter.conf**_
+- MySQLルーターがインストールされているインスタンスに正常に接続したら、_**MySQLレプリケーションソースのパブリックIPアドレス**_ を使用して、レプリケーションソースを指すようにMySQLルーターの構成を変更する必要があります。 通常のシナリオでは、_**/etc/mysqlrouter/mysqlrouter.conf**_ の下にあるMySQLルーター構成ファイルを変更する必要があります。
 
-- To speed things up, the MySQL Router installed on this instance has been pre-configured, and you need just to update the place holder already present in the configuration for the _**MySQL Replication Source Public IP Address**_, running the following command:
+- 処理を高速化するために、このインスタンスにインストールされているMySQLルーターは事前構成されており、次のコマンドを実行して、_**MySQLレプリケーションソースパブリックIPアドレス**_ の構成に既に存在するプレースホルダーを更新する必要があります:
 ```
 sudo sed -i 's/destinations =.*/destinations = <put-here-public-ip-of-mysql-replication-source>/g' /etc/mysqlrouter/mysqlrouter.conf
 ```
@@ -181,12 +181,11 @@ Go to: _**Main Menu >> Compute >> Instances >>**_ Click on _**mysql-replication-
 
 ![](images/Lab4-18b.png)
 
-_**PLEASE NOTE**_: After you modify the command above inserting the _**MySQL Replication Source Public IP Address**_, your command will look as per following example:
+_**注意**_: 上記のコマンドを変更して _**MySQLレプリケーションソースパブリックIPアドレス**_ を挿入すると、コマンドは次の例のようになります:
 _**sudo sed -i s/SOURCE_PUBLIC_IP/140.238.220.163/g /etc/mysqlrouter/mysqlrouter.conf**_
 
 
-
-- Once done, check the content of the configuration file to verify that the variable _**destinations**_ is equal to the _**Public IP Address of the Replication Source**_.
+- 完了したら、構成ファイルの内容をチェックして、変数 _**destinations**_ が _**レプリケーションソースのパブリックIPアドレス**_ と等しいことを確認します
 To do it, execute:
 ```
 cat /etc/mysqlrouter/mysqlrouter.conf
