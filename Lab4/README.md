@@ -82,17 +82,17 @@ IPSec接続は、オンプレミス環境をOCIに接続するために使用さ
 _**注意:**_ OCIは、作成日以降に名前を付けた秘密鍵用に生成します（例：ssh-key-YYYY-MM-DD.key）。 同じ日に2つ以上の秘密鍵を生成すると、オペレーティングシステムが保存時にファイル名を変更する場合があります。 たとえば、保存している現在の秘密鍵は、次のような命名規則に従う場合があります：ssh-key-YYYY-MM-DD（1）.key　したがって、注意して正しいファイル名に注意してください。 
 
 ### **Step 4.11:**
-- Scroll down and after the _**Boot Volume**_ section, click on _**Show advanced options**_
+- 下にスクロールして、_**ブートボリューム**_ セクションの後に _**拡張オプションを表示**_ をクリックします
 
 ![](images/Lab4-12.png)
 
 ### **Step 4.12:**
-- In the _**Management**_ tab, select the _**Paste cloud-init script**_ radio button. The _**Cloud-init script**_ input box will appear as per below image.
+- _**管理**_ タブで、_**Cloud-initスクリプトの貼り付け**_ ラジオボタンを選択します。 _**Cloud-initスクリプト**_ 入力ボックスは下の画像のように表示されます。 
 
 ![](images/Lab4-13.png)
 
 ### **Step 4.13:**
-- Paste-in the following script:
+- 次のスクリプトに貼り付けます:
 ```
 #cloud-config
 # Source: https://cloudinit.readthedocs.io/en/latest/topics/examples.html#yaml-examples
@@ -105,11 +105,11 @@ runcmd:
 - './setup.sh'
 final_message: "The system is finally up, after $UPTIME seconds"
 ```
-This is a cloud init script which will install MySQL Shell and MySQL Router, configuring it to require minimal effort to point it to Replication Source MySQL Instance.
+これは、MySQLシェルとMySQLルーターをインストールし、レプリケーションソースのMySQLインスタンスを指すように最小限の労力で構成するクラウド初期化スクリプトです
 
-_**MAKE SURE TO COPY AND PASTE THE SCRIPT CORRECTLY!!**_
+_**スクリプトを正しくコピーして貼り付けてください !!**_
 
-- Once done, click _**Create**_
+- 完了したら、_**作成**_ をクリックします 
 
 ![](images/Lab4-14.png)
 
