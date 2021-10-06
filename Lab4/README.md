@@ -33,10 +33,9 @@ IPSec接続は、オンプレミス環境をOCIに接続するために使用さ
 ![](images/Lab4-2.png)
 
 ### **Step 4.3:**
-- In the _**Name**_ field, insert _**mysql-replication-router**_ (or any other name at your convenience).
+-　_**名前**_ フィールドに、_**mysql-replication-router**_ （または都合のよい他の名前）を挿入します。
 
-- The _**Placement**_ section is the section where you can change Availability Domain and Fault Domain. For the scope of this workshop leave everything as default.
-
+- _**配置**_　セクションは、AvailabilityDomainとFaultDomainを変更できるセクションです。 このワークショップの範囲では、すべてをデフォルトのままにします。 
 ![](images/Lab4-3.png)
 
 ### **Step 4.4:**
