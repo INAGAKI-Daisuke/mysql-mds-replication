@@ -75,14 +75,14 @@ Once done, click the _**Create**_ button.
 ![](images/Lab3-9.png)
 
 ### **Step 3.10:**
-- The MySQL DB System will enter _**CREATING**_ state (as per picture below). Meanwhile you can go ahead and proceed to the next Lab.
+- MySQL DBシステムは　_**作成中**_　状態になります（下の図のように）。 その間、先に進んで次のラボに進むことができます。 
 
 ![](images/Lab3-10.png)
 
 ## Conclusion
 
-In this Lab you deployed MySQL Database Service and created the administration user for the database. All set and ready to replicate? Not yet, as you might have noticed the MySQL Database Service does not expose any Public IP, therefore we will need to expose one via a bastion host where we will install MySQL Router
- 
+このラボでは、MySQLデータベースサービスをデプロイし、データベースの管理ユーザーを作成しました。 すべて設定され、複製する準備ができていますか？ まだ、MySQLデータベースサービスがパブリックIPを公開していないことに気付いたかもしれませんが、MySQLルーターをインストールする踏み台ホストを介して公開する必要があります。 
+
 Learn more about **[MySQL Database Service](https://docs.oracle.com/en-us/iaas/mysql-database/doc/overview-mysql-database-service.html)**
 
 **[<< Go to Lab 2](../Lab2/README.md)** | **[Home](/README.md)** | **[Go to Lab 4 >>](../Lab4/README.md)**
