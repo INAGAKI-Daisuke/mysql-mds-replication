@@ -14,9 +14,9 @@
 - パブリックインターネットにアクセスできるコンピュートインスタンスで実行されているMySQLルーターを使用して、リバースプロキシとして機能し、OCI内部ネットワークを介して受信したデータベーストラフィックをソースのオンプレミスMySQLインスタンスにルーティングします。 MySQLルーターは、元々、オンプレミスの高可用性セットアップに透過的なルーティングレイヤーを提供することを目的としていますが、そうするように構成されている場合は、単一のインスタンスへの単純なルーティングも提供できます。 
 **[MySQL Router Overview](https://www.mysql.com/it/products/enterprise/router.html)**
 
-IPSec connectivity it is **the most secure** approach to be used in order to connect your on-premise environment with OCI. In this hands-on lab, for simplicity, we expose the database traffic via the public internet using MySQL Router.
+IPSec接続は、オンプレミス環境をOCIに接続するために使用される最も安全なアプローチです。 このハンズオンラボでは、簡単にするために、MySQLルーターを使用してパブリックインターネット経由でデータベーストラフィックを公開します。
 
-The steps you will execute will allow you to deploy and configure MySQL Router automatically, using a cloud-init script. After the deployment, you will set the IP Address for the MySQL Source instance in the router configuration.
+実行する手順により、cloud-initスクリプトを使用して、MySQLルーターを自動的にデプロイおよび構成できます。 デプロイ後、ルーター構成でMySQLソースインスタンスのIPアドレスを設定します。
 
 ## Steps
 
