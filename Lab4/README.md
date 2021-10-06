@@ -148,20 +148,20 @@ echo "routing_strategy = first-available" >> /etc/mysqlrouter/mysqlrouter.conf
 ![](images/Lab4-17.png)
 
 ### **Step 4.17:**
-_**PLEASE NOTE**_: In this step we will connect  to the MySQL Router instance. Prior to executing this step, allow it an extra couple of minutes  for the cloud-init script to complete its execution and for the instance to reboot.
+_**注意**_: このステップでは、MySQLルーターインスタンスに接続します。 この手順を実行する前に、cloud-initスクリプトが実行を完了し、インスタンスが再起動するまで、さらに数分待ちます。 
 
-- In order to connect to the MySQL Router Instance using the previously noted _**Public IP Address**_, execute the following steps:
+- 前述の _**パブリックIPアドレス**_ を使用してMySQLルーターインスタンスに接続するには、次の手順を実行します :
 
-a - Rename the recently transferred private key file and assign the privileges required by OCI
+a - 最近転送された秘密鍵ファイルの名前を変更し、OCIに必要な特権を割り当てます 
 ```
 mv ssh-*.key router.key
 chmod 600 router.key
 ```
-b - Connect to the newly created _**MySQL Router**_ instance over ssh, replacing the  _**Public IP Address**_ after the "@":
+b - 新しく作成された _**MySQL Router**_ インスタンスにssh経由で接続し、「@」の後の _**パブリックIPアドレス**_ を置き換えます。:
 ```
 ssh -i router.key opc@<router-instance-public-ip>
 ```
-c - If prompted to accept fingerprints, enter _**yes**_
+c - acceptを受け入れるように求められたら、_**yes**_ と入力します
 
 ![](images/Lab4-18.png)
 
