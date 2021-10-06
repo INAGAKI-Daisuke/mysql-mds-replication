@@ -43,23 +43,23 @@ OCIでは、インバウンドレプリケーションには、MySQLデータベ
 ### **Step 5.4:**
 - _**ソース接続**_セクションでは、MySQLソースインスタンスでレプリケーションを設定するためのパラメータを設定できます。 
 - 
-- _**注意**_: はじめに述べたように、MySQLデータベースサービスDBシステムはインターネットに直接アクセスできないため、_**内部FQDN**_ を _**ソースホスト名*として使用します。**_
+- _**注意**_: はじめに述べたように、MySQLデータベースサービスDBシステムはインターネットに直接アクセスできないため、_**内部FQDN**_ を _**ソースホスト名**_ として使用します。
 次の図のように、MySQLルーターのコンピューティングインスタンスの詳細ページ（ _**メインメニュー>>コンピューティング>>インスタンス>> MySQLルーターインスタンスをクリック**_ ）から取得できます。 
 
 ![](images/Lab5-4a.png)
 
-- Once you have retrieved the _**MySQL Router Internal FQDN**_, enter the following values in the _**Source Connection**_ input fields (as in the below picture): 
+- _**MySQLルーターの内部FQDN**_　を取得したら、_**ソース接続**_　入力フィールドに次の値を入力します（次の図を参照） : 
 	- Hostname: _**MySQL Router Internal FQDN**_ 
 	- Port: _**3306**_
 	- Username: _**root**_
 	- Password: _**Oracle.123**_
 	- Confirm Password: _**Oralce.123**_
 
-- Under the _**SSL Mode**_ subsection, select the box _**Disabled (DISABLED)**_
+- _**SSL Mode**_　サブセクションで、ボックス　_**無効（DISABLED）**_　を選択します
 
 ![](images/Lab5-4b.png)
 
-_**PLEASE NOTE**_: This is a Lab environment, therefore, for the sake of simplicity, we have disabled encryption in the replication channel. If you will be configuring MySQL Database Service replication channel on a real environment (production, test, dev... doesn't matter) you should _**ALWAYS**_ set _**SSL Mode**_ to _**REQUIRED (REQUIRED)**_.
+_**注意**_: This is a Lab environment, therefore, for the sake of simplicity, we have disabled encryption in the replication channel. If you will be configuring MySQL Database Service replication channel on a real environment (production, test, dev... doesn't matter) you should _**ALWAYS**_ set _**SSL Mode**_ to _**REQUIRED (REQUIRED)**_.
 
 ### **Step 5.5:**
 - The _**Target**_ section allows you to choose the _**MySQL Database Service DB System**_ which you will select as _**Replica**_
@@ -149,15 +149,16 @@ create database test;
 ```
 
 ### **Step 5.12:**
-- Time to see replication in action! Connect to _**MySQL Database Service Replica Instance**_ over the _**Private IP Address**_ and check again the list of schemas.
+- レプリケーションの動作を確認します！ _**プライベートIPアドレス**_　を介して　_**MySQLデータベースサービスレプリカインスタンス**_　に接続し、スキーマのリストを再度確認します
 
-_**PLEASE NOTE**_: In order to connect to _**MySQL Database Service**_ we will use its _**Private IP**_. You can retrieve the _**MySQL Database Service  Private IP Address**_ from the MySQL Database Service DB System details page (_**Main Menu >> Compute >> Instances >> click on the MySQL Database Service DB System**_), as per below picture:
+_**注意**_: _**MySQL Database Service**_ に接続するために、その _**プライベートIP**_　を使用します。 _**MySQLデータベースサービスのプライベートIPアドレス**_　は、MySQLデータベースサービスのDBシステムの詳細ページから取得できます（　_**メインメニュー>>コンピューティング>>インスタンス>> MySQLデータベースサービスのDBシステムをクリックします**_ ）
 
 ![](images/Lab5-9a.png)
 
-To connect again to _**MySQL Database Service Replica Instance**_ and check if the previously created schema has replicated successfully, execute the following commands:
+_**MySQL DatabaseServiceレプリカインスタンス**_　に再度接続し、以前に作成したスキーマが正常に複製されたかどうかを確認するには、次のコマンドを実行します
+commands:
 ```
-mysqlsh --uri root:Oracle.123@<mds-private-ip>:3306 --sql
+mysqlsh --uri admin:Oracle.123@<mds-private-ip>:3306 --sql
 show databases;
 ```
 結果は次の画像のようになります
