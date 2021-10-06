@@ -21,14 +21,14 @@ IPSec接続は、オンプレミス環境をOCIに接続するために使用さ
 ## Steps
 
 ### **Step 4.1:**
-- From the main menu on the top left corner select _**Compute >> Instances**_
+- 左上隅のメインメニューから、_**コンピューティング >> インスタンス**_ を選択します 
 
 ![](images/Lab4-1.png)
 
 ### **Step 4.2:**
-- In the compartment selector, make sure that the _**mds-replication-hol**_ Compartment is selected.
+- コンパートメントセレクターで、_**mds-replication-hol**_ コンパートメントが選択されていることを確認します。
 
-- Click on the _**Create Instance**_ button.
+- _**インスタンスの作成**_ ボタンをクリックします。 
 
 ![](images/Lab4-2.png)
 
